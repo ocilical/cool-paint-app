@@ -8,7 +8,7 @@ let x = 0;
 let y = 0;
 let size = 1;
 
-const clamp = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b)); //clamp num to range a,b
+
 
 function startDraw() {
     mouseDown = true;
@@ -34,8 +34,7 @@ function drawLine() {
 }
 
 function changeSize() {
-    console.log(event.deltaY);
-    size = clamp(size - Math.sign(event.deltaY), 1, 72);
+    size = Math.max(size - Math.sign(event.deltaY), 1);
     ctx.lineWidth = size;
     document.getElementById("sizeText").innerHTML = 'size: ' + size;
 }
