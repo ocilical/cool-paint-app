@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>cool paint app!</title>
-        <link rel="stylesheet" type="text/css" href="theme.css">
-        <script type="text/javascript" src="draw.js" async></script>
-    </head>
-    <body>
-        <canvas id="coolCanvas" width="1024" height="576"></canvas>
-        <p>adjust size with scroll wheel!</p>
-        <p id="sizeText">size: 1</p>
-        <div>
-            <p>pick a color!</p>
-            <p>red:</p>
-            <input type="range" min="0" max="255" value="0" id="pickRed">
-            <p style="display: inline" id="displayRed">0</p>
-            <p>green:</p>
-            <input type="range" min="0" max="255" value="0" id="pickGreen">
-            <p style="display: inline" id="displayGreen">0</p>
-            <p>blue:</p>
-            <input type="range" min="0" max="255" value="0" id="pickBlue">
-            <p style="display: inline" id="displayBlue">0</p>
-            
-            <div id="colorDisp"></div>
-        </div>
-        
-    </body>
+
+<head>
+    <title>cool paint app!</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <script type="text/javascript" src="draw.js" async></script>
+</head>
+
+<body>
+    <canvas id="coolCanvas" width="1024" height="576"></canvas>
+    <p>adjust size with scroll wheel!</p>
+    <p id="sizeText">size: 1</p>
+    <div>
+        <p>pick a color!</p>
+        <p>red:</p>
+        <input type="range" min="0" max="255" value="0" id="pickRed">
+        <p style="display: inline" id="displayRed">0</p>
+        <p>green:</p>
+        <input type="range" min="0" max="255" value="0" id="pickGreen">
+        <p style="display: inline" id="displayGreen">0</p>
+        <p>blue:</p>
+        <input type="range" min="0" max="255" value="0" id="pickBlue">
+        <p style="display: inline" id="displayBlue">0</p>
+
+        <div id="colorDisp"></div>
+    </div>
+
+</body>
+
 </html>

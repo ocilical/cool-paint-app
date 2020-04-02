@@ -28,12 +28,12 @@ function stopDraw() {
 }
 
 function drawLine() {
-    if(mouseDown) {
+    if (mouseDown) {
         const newX = event.offsetX;
         const newY = event.offsetY;
         ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(newX,newY);
+        ctx.moveTo(x, y);
+        ctx.lineTo(newX, newY);
         ctx.stroke();
         x = newX;
         y = newY;
@@ -54,17 +54,17 @@ function setColor() {
     document.getElementById("colorDisp").style.backgroundColor = color;
 }
 
-r.addEventListener("input", ()=>{
+r.addEventListener("input", () => {
     setColor()
     rDisp.innerHTML = r.value;
 })
 
-g.addEventListener("input", ()=>{
+g.addEventListener("input", () => {
     setColor()
     gDisp.innerHTML = g.value;
 })
 
-b.addEventListener("input", ()=>{
+b.addEventListener("input", () => {
     setColor()
     bDisp.innerHTML = b.value;
 })
