@@ -4,3 +4,11 @@ canvas {
     border-width: 2px;
     border-color: #000;
 }
+#colorDisp{
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+}
