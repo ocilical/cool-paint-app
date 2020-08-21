@@ -6,12 +6,7 @@ let x = 0;
 let y = 0;
 let size = 1;
 
-const r = document.getElementById("pickRed");
-const g = document.getElementById("pickGreen");
-const b = document.getElementById("pickBlue");
-const rDisp = document.getElementById("displayRed");
-const gDisp = document.getElementById("displayGreen");
-const bDisp = document.getElementById("displayBlue");
+const colorPicker = document.getElementById("colorPicker");
 
 //line functions
 
@@ -49,25 +44,11 @@ function changeSize() {
 //color functions
 
 function setColor() {
-    const color = `rgb(${r.value},${g.value},${b.value})`
+    const color = colorPicker.value;
     ctx.strokeStyle = color;
-    document.getElementById("colorDisp").style.backgroundColor = color;
 }
 
-r.addEventListener("input", () => {
-    setColor()
-    rDisp.innerHTML = r.value;
-})
-
-g.addEventListener("input", () => {
-    setColor()
-    gDisp.innerHTML = g.value;
-})
-
-b.addEventListener("input", () => {
-    setColor()
-    bDisp.innerHTML = b.value;
-})
+colorPicker.addEventListener("input", setColor);
 
 canvas.addEventListener('mousedown', startDraw);
 canvas.addEventListener('mouseup', stopDraw);
